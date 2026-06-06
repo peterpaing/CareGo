@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 body {
-  background-color: #fce4ec; /* Soft pink background */
+  background-color: #fce4ec; 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  /* Adding a subtle dot pattern to the main background */
   background-image: radial-gradient(#f8bbd0 2px, transparent 2px);
   background-size: 30px 30px;
 }
 
+.container{
+    position: relative;
+}
 /* The main browser window container */
 .window {
   width: 850px;
@@ -133,11 +135,50 @@ p {
 
 .main-image {
   position: absolute;
-  z-index: 10;
   font-family: 'VT323', monospace;
- font-size: 22px;
- top: 190px;
+  font-size: 22px;
+  top: 190px;
   right: 60px;
   width: 300px;
   
+}
+
+.speach-text{
+    
+    width: 850px;
+    height: 500px;  
+    position: absolute;
+    top:21%;
+    left: 30%;
+    border: 2px solid #fe70a4;
+    background: linear-gradient(180deg, #ffe4e1 0%, #ffcdd2 100%);
+    border-radius: 12px;
+}
+
+.speach-container {
+   width: 700px ;
+  height: 350px;
+  padding: 50px;
+  border: 4px dashed #ffffff;
+  margin: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, #ffe4e1 0%, #ffcdd2 100%);
+}
+
+.close-btn {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff5f56;
+    border-radius: 100%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 97%;
+    
 }
