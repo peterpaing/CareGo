@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+body {
+  background-color: #fce4ec; /* Soft pink background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  /* Adding a subtle dot pattern to the main background */
+  background-image: radial-gradient(#f8bbd0 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+/* The main browser window container */
+.window {
+  width: 850px;
+  background: #ffd1dc;
+  border: 4px solid #d81b60;
+  border-radius: 12px;
+  box-shadow: 12px 12px 0px rgba(216, 27, 96, 0.15);
+  overflow: hidden;
+  position: relative;
+}
