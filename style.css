@@ -109,3 +109,35 @@ p {
   margin-bottom: 35px;
   text-shadow: #fff5f500 1px 1px, #fafafa 2px 2px, #e4e0e0 3px 3px;
  }
+
+ /* Pixelated Button */
+.btn {
+  background: #ff80ab;
+  border: 4px solid #ff80ab;
+  color: white;
+  font-family: 'VT323', monospace;
+  text-shadow: 1px 1px 0 #3f3e3f;
+  font-size: 22px;
+  padding: 12px 15px;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #f0578f;
+  transition: all 0.1s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Button click animation */
+.btn:active {
+  box-shadow: 0px 0px 0 #e76293;
+  transform: translate(5px, 5px);
+}
+
+.main-image {
+  position: absolute;
+  z-index: 10;
+  font-family: 'VT323', monospace;
+ font-size: 22px;
+ top: 190px;
+  right: 60px;
+  width: 300px;
+  
+}
