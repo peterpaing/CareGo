@@ -49,3 +49,23 @@ body {
 .dot.red { background: #ff5f56; }
 .dot.yellow { background: #ffbd2e; }
 .dot.green { background: #27c93f; }
+
+/* Fake URL bar */
+.url-bar {
+  background: white;
+  border: 3px solid #d81b60;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  color: #d81b60;
+  flex-grow: 0;
+  width: 350px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.title-heart {
+  color: #d81b60;
+  font-size: 24px;
+}
