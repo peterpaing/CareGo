@@ -22,3 +22,30 @@ body {
   overflow: hidden;
   position: relative;
 }
+
+/* Top navigation bar */
+.title-bar {
+  background: #f8bbd0;
+  border-bottom: 4px solid #d81b60;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Window control buttons (red, yellow, green) */
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #d81b60;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
