@@ -18,8 +18,6 @@ function randomMessage (){
         document.querySelector('.fa-power-off').style.display ='inline-block'
         return render ()
       },500)
-        
-      
 }
 
 function restart(){
