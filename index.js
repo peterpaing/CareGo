@@ -27,7 +27,7 @@ function restart(){
       if(isClicked){
       document.getElementById('heading').innerHTML ='သဲသဲလေးရေ!'
        document.getElementById('paragraph').innerHTML = 'If koko knocked out or busy and you need to slip out, just leave a quick tap here!'
-       document.getElementsByClassName('main-image')[0].src='./images/main-image.png'
+       document.querySelector('.main-image').src='./images/main-image.png'
        isClicked = false 
        document.querySelector('.fa-power-off').style.display ='none'
        
