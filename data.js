@@ -15,11 +15,8 @@
       text : 'Be sure to check for traffic when you are crossing the street' ,
       image : 'images/road.gif'
     } ,
-    { heading : 'Boltကိုဖြေးဖြေးမောင်းခိုင်းပါ🛵' ,
-      text : 'Remember to tell the driver to go slowly when you take a Bolt motorbike' ,
-      image : 'images/drive.gif'
-    } ,
-    { heading : 'Suncream မမေ့နဲ့နော်🧴' ,
+    
+    { heading : 'Suncreamမမေ့နဲ့နော်🧴' ,
       text : 'Make sure you pack some sunscreen' ,
       image : 'images/sun.gif'
     } ,

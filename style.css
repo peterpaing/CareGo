@@ -115,15 +115,18 @@ body {
 
 .text-area {
   width: 55%;
+  height: 260px; /* 1. Locks the total height of the text block */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 2. Pins H1 to the top and Button to the bottom */
+  align-items: flex-start;
 }
 
-/* HELLO! Heading */
 h1 {
   font-family: 'Press Start 2P', cursive;
   color: var(--pink-main);
-  font-size: 40px;
-  margin: 0 0 25px 0;
-  /* Layered text-shadow to create a 3D pixel effect */
+  font-size: 30px;
+  margin: 0; /* Removed bottom margin (Flexbox handles the spacing now) */
   text-shadow: 
     3px 3px 0 var(--white), -2px -2px 0 var(--white), 
     2px -2px 0 var(--white), -2px 2px 0 var(--white), 
@@ -131,13 +134,14 @@ h1 {
   letter-spacing: 4px;
 }
 
-/* Paragraph text */
 p {
   font-family: 'VT323', monospace;
   color: var(--pink-mid);
   font-size: 30px;
   line-height: 1.3;
-  margin-bottom: 35px;
+  margin: 0; /* Removed bottom margin */
+  padding-top: 15px; /* Adds a little breathing room below the H1 */
+  flex-grow: 1; /* 3. This tells the paragraph to act like a sponge and absorb all empty space! */
   text-shadow: transparent 1px 1px, var(--shadow-light) 2px 2px, var(--shadow-dark) 3px 3px;
 }
 
