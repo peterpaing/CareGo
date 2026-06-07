@@ -7,7 +7,7 @@
       text : 'Remember to take your keys with you' ,
       image : 'images/key.gif'
     } ,
-    { heading : 'အနွေးထည်ကောပါရဲ့လား 🧥' ,
+    { heading : 'အနွေးထည်ကောပါရဲ့လား🧥' ,
       text : 'Are you sure you have your jacket with you?' ,
       image : 'images/cold.gif'
     } ,
