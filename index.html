@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kawaii Pixel World</title>
+  <title>Peek-a-Go</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
-    <div class="window">
-    <div class="title-bar">
-        <div class="dots">
-            <div class="dot red"></div>
-            <div class="dot yellow"></div>
-            <div class="dot green"></div>
-        </div>
-        <div class="url-bar">Tiktok @Guanqt</div>
-        <div class="title-heart">♥</div>
-        </div>
-    <div class="content">
-        <div class="text-area">
-            <h1 id="heading">သဲသဲလေးရေ!</h1>
-            <p id="paragraph">If koko knocked out or busy and you need to slip out, just leave a quick tap here! </p>
-            <button class="btn"> Open Ko Ko's MESSAGE 👻</button>
-        </div>
-        <i class="fa-solid fa-power-off"></i>
-        <img src="./images/main-image.png" class="main-image">
-    </div>
-   </div>
-     <script src="index.js" type="module"></script>
- </body>
+  <main class="window">
+    
+    <header class="title-bar">
+      <div class="dots" aria-hidden="true"> <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+      </div>
+      <div class="url-bar">Tiktok @Guanqt</div>
+      <div class="title-heart" aria-hidden="true">♥</div>
+    </header>
+
+    <section class="content">
+      <div class="text-area">
+        <h1 id="heading">သဲသဲလေးရေ!</h1>
+        <p id="paragraph">If koko knocked out or busy and you need to slip out, just leave a quick tap here! </p>
+        <button class="btn"> Open Ko Ko's MESSAGE 👻</button>
+      </div>
+      
+      <i class="fa-solid fa-power-off" aria-hidden="true"></i>
+      
+      <img src="./images/main-image.png" class="main-image" alt="Cute pixel art illustration">
+    </section>
+
+  </main>
+
+  <script src="index.js" type="module"></script>
+</body>
 </html>
