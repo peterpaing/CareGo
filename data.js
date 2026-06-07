@@ -1,4 +1,4 @@
-const data = [
+ export const data = [
     { heading : 'ထီးယူသွားပါ☔️' ,
       text : 'Make sure to grab an umbrella before you head out' ,
       image : 'images/rain.gif'
