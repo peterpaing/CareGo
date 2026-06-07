@@ -1,34 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
+/* --- COLOR PALETTE --- */
+:root {
+  
+  --pink-dark: #d81b60;    
+  --pink-main: #ff80ab;     
+  --pink-mid: #e86590;      
+
+  /* Backgrounds */
+  --bg-page: #fce4ec;      
+  --bg-pattern: #f8bbd0;   
+  --bg-window: #ffd1dc;    
+  --bg-grad-top: #ffe4e1;  
+  --bg-grad-bottom: #ffcdd2;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --text-dark: #3f3e3f;    
+  --shadow-light: #fafafa;
+  --shadow-dark: #e4e0e0;
+
+  /* Window Controls */
+  --dot-red: #ff5f56;
+  --dot-yellow: #ffbd2e;
+  --dot-green: #27c93f;
+}
+
 body {
-  background-color: #fce4ec; 
+  background-color: var(--bg-page); 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: radial-gradient(#f8bbd0 2px, transparent 2px);
+  background-image: radial-gradient(var(--bg-pattern) 2px, transparent 2px);
   background-size: 30px 30px;
 }
 
-.container{
-    position: relative;
+.container {
+  position: relative;
 }
+
 /* The main browser window container */
 .window {
   width: 850px;
-  background: #ffd1dc;
-  border: 4px solid #d81b60;
+  background: var(--bg-window);
+  border: 4px solid var(--pink-dark);
   border-radius: 12px;
-  box-shadow: 12px 12px 0px rgba(216, 27, 96, 0.15);
+  /* Using rgba for the shadow opacity, keeping the RGB values of --pink-dark */
+  box-shadow: 12px 12px 0px rgba(216, 27, 96, 0.15); 
   overflow: hidden;
   position: relative;
 }
 
 /* Top navigation bar */
 .title-bar {
-  background: #f8bbd0;
-  border-bottom: 4px solid #d81b60;
+  background: var(--bg-pattern);
+  border-bottom: 4px solid var(--pink-dark);
   padding: 12px 20px;
   display: flex;
   align-items: center;
@@ -45,22 +73,22 @@ body {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 2px solid #d81b60;
+  border: 2px solid var(--pink-dark);
 }
 
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27c93f; }
+.dot.red { background: var(--dot-red); }
+.dot.yellow { background: var(--dot-yellow); }
+.dot.green { background: var(--dot-green); }
 
 /* Fake URL bar */
 .url-bar {
-  background: white;
-  border: 3px solid #d81b60;
+  background: var(--white);
+  border: 3px solid var(--pink-dark);
   border-radius: 20px;
   padding: 6px 20px;
   font-family: 'VT323', monospace;
   font-size: 22px;
-  color: #d81b60;
+  color: var(--pink-dark);
   flex-grow: 0;
   width: 350px;
   text-align: center;
@@ -68,7 +96,7 @@ body {
 }
 
 .title-heart {
-  color: #d81b60;
+  color: var(--pink-dark);
   font-size: 24px;
 }
 
@@ -76,13 +104,13 @@ body {
 .content {
   height: 350px;
   padding: 50px;
-  border: 4px dashed #ffffff;
+  border: 4px dashed var(--white);
   margin: 15px;
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(180deg, #ffe4e1 0%, #ffcdd2 100%);
+  background: linear-gradient(180deg, var(--bg-grad-top) 0%, var(--bg-grad-bottom) 100%);
 }
 
 .text-area {
@@ -92,45 +120,45 @@ body {
 /* HELLO! Heading */
 h1 {
   font-family: 'Press Start 2P', cursive;
-  color: #ff80ab;
+  color: var(--pink-main);
   font-size: 40px;
   margin: 0 0 25px 0;
   /* Layered text-shadow to create a 3D pixel effect */
   text-shadow: 
-    3px 3px 0 #fff, -2px -2px 0 #fff, 
-    2px -2px 0 #fff, -2px 2px 0 #fff, 
-    5px 5px 0 #d81b60;
+    3px 3px 0 var(--white), -2px -2px 0 var(--white), 
+    2px -2px 0 var(--white), -2px 2px 0 var(--white), 
+    5px 5px 0 var(--pink-dark);
   letter-spacing: 4px;
 }
 
 /* Paragraph text */
 p {
   font-family: 'VT323', monospace;
-  color: #e86590;
+  color: var(--pink-mid);
   font-size: 30px;
   line-height: 1.3;
   margin-bottom: 35px;
-  text-shadow: #fff5f500 1px 1px, #fafafa 2px 2px, #e4e0e0 3px 3px;
- }
+  text-shadow: transparent 1px 1px, var(--shadow-light) 2px 2px, var(--shadow-dark) 3px 3px;
+}
 
- /* Pixelated Button */
+/* Pixelated Button */
 .btn {
-  background: #ff80ab;
-  border: 4px solid #ff80ab;
-  color: white;
+  background: var(--pink-main);
+  border: 4px solid var(--pink-main);
+  color: var(--white);
   font-family: 'VT323', monospace;
-  text-shadow: 1px 1px 0 #3f3e3f;
+  text-shadow: 1px 1px 0 var(--text-dark);
   font-size: 22px;
   padding: 12px 15px;
   cursor: pointer;
-  box-shadow: 5px 5px 0 #f0578f;
+  box-shadow: 5px 5px 0 var(--pink-mid);
   transition: all 0.1s ease-in-out;
   border-radius: 10px;
 }
 
 /* Button click animation */
 .btn:active {
-  box-shadow: 0px 0px 0 #e76293;
+  box-shadow: 0px 0px 0 var(--pink-mid);
   transform: translate(5px, 5px);
 }
 
@@ -144,11 +172,64 @@ p {
   border-radius: 10px;
 }
 
-.content .fa-power-off{
-  display: none ;
-  color: #d81b60;
+.content .fa-power-off {
+  display: none;
+  color: var(--pink-dark);
   font-size: 25px;
   position: absolute;
   top: 95px;
   right: 30px;
+}
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 880px) {
+ 
+  .window {
+    width: 90%;
+    margin: 20px;
+  }
+
+ 
+  .url-bar {
+    width: auto;
+    flex-grow: 1;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+
+  .title-heart {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center; /* Center the text for mobile */
+  }
+
+  .text-area {
+    width: 100%;
+  }
+
+  /* Scale down the typography */
+  h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  
+  .main-image {
+    position: static; 
+    width: 80%;
+    max-width: 250px;
+    margin-top: 20px;
+  }
 }
