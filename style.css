@@ -144,3 +144,10 @@ p {
   border-radius: 10px;
 }
 
+.fa-power-off{
+  color: #d81b60;
+  font-size: 25px;
+  position: absolute;
+  top: 95px;
+  right: 30px;
+}

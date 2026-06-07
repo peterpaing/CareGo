@@ -13,16 +13,21 @@ function render (){
 }
 
 function randomMessage (){
+      setTimeout (function(){
         isClicked = true
         return render ()
-
-    
+      },500)
+        
+      
 }
 
  function restart(){
+      if (isClicked){
+        setTimeout (function(){
        document.getElementById('heading').innerHTML ='သဲသဲလေးရေ!'
        document.getElementById('paragraph').innerHTML = 'If koko knocked out or busy and you need to slip out, just leave a quick tap here!'
        document.getElementsByClassName('main-image')[0].src='./images/main-image.png'
        isClicked = false 
-}
+       },500)
+}}
 
