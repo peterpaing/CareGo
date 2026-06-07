@@ -1,6 +1,11 @@
 import { data } from './data.js'
 
 
+data.forEach(item => {
+    const img = new Image()
+    img.src = item.image
+})
+
 const messageBtn = document.querySelector('.btn')
 const powerBtn = document.querySelector('.fa-power-off')
 const heading = document.getElementById('heading')
@@ -9,35 +14,31 @@ const mainImage = document.querySelector('.main-image')
 
 let isClicked = false
 
-
 messageBtn.addEventListener('click', randomMessage)
 powerBtn.addEventListener('click', restart)
 
-
 function render() {
     const randomOutput = Math.floor(Math.random() * data.length)
-    
-    
-    heading.innerHTML = data[randomOutput].heading
-    paragraph.innerHTML = data[randomOutput].text
+
+    heading.textContent = data[randomOutput].heading
+    paragraph.textContent = data[randomOutput].text
     mainImage.src = data[randomOutput].image
 }
 
 function randomMessage() {
-    setTimeout(function() {
-        isClicked = true
-        powerBtn.style.display = 'inline-block'
-        render() 
-    }, 500)
+    isClicked = true
+    powerBtn.style.display = 'inline-block'
+    render()
 }
 
 function restart() {
     if (isClicked) {
-        heading.innerHTML = 'သဲသဲလေးရေ!'
-        paragraph.innerHTML = 'If koko knocked out or busy and you need to slip out, just leave a quick tap here!'
+        heading.textContent = 'သဲသဲလေးရေ!'
+        paragraph.textContent =
+            'If koko knocked out or busy and you need to slip out, just leave a quick tap here!'
         mainImage.src = './images/main-image.png'
-        
-        isClicked = false 
+
+        isClicked = false
         powerBtn.style.display = 'none'
     }
 }
