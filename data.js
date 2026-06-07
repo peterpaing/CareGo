@@ -23,4 +23,8 @@ const data = [
       text : 'Make sure you pack some sunscreen' ,
       image : 'images/sun.gif'
     } ,
+    { heading : 'အဆင်မငမ်းနဲ့👀' ,
+      text : 'Don\'t go looking at other guys while you\'re out' ,
+      image : 'images/look.gif'
+    } ,
 ]
