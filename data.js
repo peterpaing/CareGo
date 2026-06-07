@@ -31,7 +31,7 @@
       text : 'Don\'t forget to text me when you get outside' ,
       image : 'images/message.gif'
     } ,
-    { heading : 'ဘယ်သွားသွားreportတင်ပါ🥹' ,
+    { heading : 'reportတင်ပါ🥹' ,
       text : 'Where are you off to? who are you going with?' ,
       image : 'images/report.gif'
     } ,
