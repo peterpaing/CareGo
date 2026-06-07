@@ -144,7 +144,8 @@ p {
   border-radius: 10px;
 }
 
-.fa-power-off{
+.content .fa-power-off{
+  display: none ;
   color: #d81b60;
   font-size: 25px;
   position: absolute;

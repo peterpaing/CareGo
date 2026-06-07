@@ -1,7 +1,7 @@
 import { data } from './data.js'
 
- document.getElementsByClassName('btn')[0].addEventListener('click', randomMessage)
- document.getElementsByClassName('btn')[0].addEventListener('dblclick', restart)
+ document.querySelector('.btn').addEventListener('click', randomMessage)
+ document.querySelector('.fa-power-off').addEventListener('click', restart)
 
 let isClicked = false
 
@@ -9,25 +9,26 @@ function render (){
     const randomOutput = Math.floor(Math.random()* data.length)
     document.getElementById('heading').innerHTML = data[randomOutput].heading
     document.getElementById('paragraph').innerHTML = data[randomOutput].text
-    document.getElementsByClassName('main-image')[0].src=data[randomOutput].image
+    document.querySelector('.main-image').src=data[randomOutput].image
 }
 
 function randomMessage (){
       setTimeout (function(){
         isClicked = true
+        document.querySelector('.fa-power-off').style.display ='inline-block'
         return render ()
       },500)
         
       
 }
 
- function restart(){
-      if (isClicked){
-        setTimeout (function(){
-       document.getElementById('heading').innerHTML ='သဲသဲလေးရေ!'
+function restart(){
+       
+      if(isClicked){
+      document.getElementById('heading').innerHTML ='သဲသဲလေးရေ!'
        document.getElementById('paragraph').innerHTML = 'If koko knocked out or busy and you need to slip out, just leave a quick tap here!'
        document.getElementsByClassName('main-image')[0].src='./images/main-image.png'
        isClicked = false 
-       },500)
-}}
-
+       document.querySelector('.fa-power-off').style.display ='none'
+       
+} }     
